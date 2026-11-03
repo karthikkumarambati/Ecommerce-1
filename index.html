@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="VELOX Cycles: road, mountain, city and electric bikes, plus spare parts.">
+  <title>VELOX Cycles</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Identity Services: powers the real "Continue with Google" button -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- Cinematic intro (click anywhere to skip) -->
+  <div id="intro" class="intro" aria-hidden="true">
+    <div class="intro-bg"></div>
+    <svg class="intro-bike" viewBox="0 0 200 130" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle class="draw" pathLength="1" cx="45" cy="95" r="31" stroke="#efe7d6" stroke-width="2.5"/>
+      <circle class="draw d2" pathLength="1" cx="155" cy="95" r="31" stroke="#efe7d6" stroke-width="2.5"/>
+      <path class="draw d3" pathLength="1" d="M45 95L100 95L80 45L45 95M80 45L125 45L100 95M125 45L155 95M125 45L134 30L148 32M70 38H90" stroke="#d6408f" stroke-width="4"/>
+    </svg>
+    <div class="intro-logo">VELOX<span>.</span></div>
+    <p class="intro-tag">Ride in the dark. Own the road.</p>
+  </div>
+
+  <!-- Top navigation -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="#home">VELOX</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main"></nav>
+    </div>
+  </header>
+
+  <!-- Each page is rendered into this element by script.js -->
+  <main class="container page" id="app"></main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 VELOX Cycles · Demo storefront</span>
+      <span>Ride in the dark. Own the road.</span>
+    </div>
+  </footer>
+
+  <!-- Floating cart button -->
+  <a class="fab hide" id="fab" href="#cart" aria-label="Open cart">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/>
+      <path d="M2 3h3l2.7 12.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.5L21 7H6"/>
+    </svg>
+    <span class="fab-text">Cart</span>
+    <span class="fab-count" id="fabCount">0</span>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
